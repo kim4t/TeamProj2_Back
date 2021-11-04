@@ -18,6 +18,6 @@ public class setup implements CommandLineRunner {
         checkTimeSheetRepo();
     }
     public  void checkTimeSheetRepo(){
-        System.out.println(timeSheetService.getByWeekEnding("31 March 2018","61831fca4ee79a2b054f68ba").get());
+        System.out.println(timeSheetService.getByWeekEnding("31 March 2018","user").get());
     }
 }

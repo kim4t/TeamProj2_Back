@@ -16,11 +16,11 @@ public class TimeSheetService {
     public List<TimeSheetModel> getAllTimeSheet(){
         return timeSheetRepository.findAll();
     }
-    public List<TimeSheetModel> getByUser(String userId){
-        return timeSheetRepository.findByUser(userId);
+    public List<TimeSheetModel> getByUser(String userName){
+        return timeSheetRepository.findByUser(userName);
     }
-    public Optional<TimeSheetModel> getByWeekEnding(String weekEnding, String userId){
-        return timeSheetRepository.findByUser(userId).stream().filter(we->we.getWeekEnding().equals(weekEnding)).findAny();
+    public Optional<TimeSheetModel> getByWeekEnding(String weekEnding, String userName){
+        return timeSheetRepository.findByUser(userName).stream().filter(we->we.getWeekEnding().equals(weekEnding)).findAny();
     }
     public TimeSheetModel updateTimeSheet(TimeSheetModel timeSheetModel){
         return timeSheetRepository.save(timeSheetModel);

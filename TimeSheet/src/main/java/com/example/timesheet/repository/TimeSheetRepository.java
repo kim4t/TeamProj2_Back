@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface TimeSheetRepository extends MongoRepository<TimeSheetModel,String> {
     TimeSheetModel findByWeekEnding(String weekEnding);
-    List<TimeSheetModel> findByUser(String userId);
+    List<TimeSheetModel> findByUser(String userName);
 }

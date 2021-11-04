@@ -15,8 +15,8 @@ public class TimeSheetController {
     @GetMapping()
     public TimeSheetModel getTimeSheet(@RequestBody TimeSheetModelRequest timeSheetModelRequest){
         String weekEnding = timeSheetModelRequest.getWeekEnding();
-        String userId = timeSheetModelRequest.getUserId();
-        return timeSheetService.getByWeekEnding(weekEnding,userId).orElseGet(new TimeSheetModel());
+        String userName = timeSheetModelRequest.getUserName();
+        return timeSheetService.getByWeekEnding(weekEnding,userName).orElseGet(new TimeSheetModel());
     }
     @PostMapping()
     public TimeSheetModel updateTimeSheet(@RequestBody TimeSheetModel timeSheetModel){

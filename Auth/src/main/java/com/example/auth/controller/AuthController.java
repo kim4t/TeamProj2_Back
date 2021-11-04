@@ -53,7 +53,7 @@ public class AuthController {
     @PostMapping("/auth")
     private ResponseEntity<?> authenticateClient(@RequestBody AuthenticationRequest request){
         String userName = request.getUserName();
-        String password = request.getUserName();
+        String password = request.getPassword();
         try{
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userName,password));
         }catch (Exception e){

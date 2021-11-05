@@ -55,7 +55,7 @@ public class AmazonS3BucketService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(fileURL);
+        System.out.println("https://" + bucketName + ".s3." + region + ".amazonaws.com/" + fileName);
         //https://proj-angular-bucket.s3.us-east-2.amazonaws.com/testFile.docx
         return "https://" + bucketName + ".s3." + region + ".amazonaws.com/" + fileName;
     }

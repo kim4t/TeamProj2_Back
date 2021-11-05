@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Profile" />
     <file type="web" url="file://$PROJECT_DIR$/Summary" />
     <file type="web" url="file://$PROJECT_DIR$/TimeSheet" />
   </component>
@@ -11,11 +12,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Auth/pom.xml" />
         <option value="$PROJECT_DIR$/Summary/pom.xml" />
+        <option value="$PROJECT_DIR$/Profile/pom.xml" />
         <option value="$PROJECT_DIR$/TimeSheet/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -1,7 +1,7 @@
-package com.example.profile.controller;
+package com.example.demo.controller;
 
-import com.example.profile.domain.Contact;
-import com.example.profile.service.MongoProfileService;
+import com.example.demo.domain.Contact;
+import com.example.demo.service.MongoProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

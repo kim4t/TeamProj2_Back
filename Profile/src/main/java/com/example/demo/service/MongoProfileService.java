@@ -1,7 +1,7 @@
-package com.example.profile.service;
+package com.example.demo.service;
 
-import com.example.profile.dao.ProfileRepository;
-import com.example.profile.domain.Contact;
+import com.example.demo.dao.ProfileRepository;
+import com.example.demo.domain.Contact;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

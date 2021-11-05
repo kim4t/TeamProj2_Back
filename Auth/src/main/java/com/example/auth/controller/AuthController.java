@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api")
 //@Setter(onMethod = @__({@Autowired}))
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", allowCredentials = "true")
 public class AuthController {
 
     @Autowired
@@ -63,4 +64,5 @@ public class AuthController {
         String generatedToken = jwtUtil.generateToken(loadedUser);
         return ResponseEntity.ok(new AuthenticationResponse(generatedToken,userName,"Success"));
     }
+
 }

@@ -15,11 +15,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Auth" target="1.8" />
-      <module name="Profile" target="1.8" />
-      <module name="Summary" target="1.8" />
-      <module name="TeamProj2_Back" target="15" />
-      <module name="TimeSheet" target="1.8" />
       <module name="wrapper" target="1.5" />
     </bytecodeTargetLevel>
   </component>

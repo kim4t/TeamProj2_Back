@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/timeSheet")
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", allowCredentials = "true")
 public class TimeSheetController {
     @Autowired
     private TimeSheetService timeSheetService;
-    @GetMapping()
-    public TimeSheetModel getTimeSheet(@RequestBody TimeSheetModelRequest timeSheetModelRequest){
-        String weekEnding = timeSheetModelRequest.getWeekEnding();
-        String userName = timeSheetModelRequest.getUserName();
+
+    @GetMapping("/{userName}")
+    public TimeSheetModel getTimeSheet(@PathVariable String userName, @RequestParam String weekEnding){
         return timeSheetService.getByWeekEnding(weekEnding,userName).orElseGet(new TimeSheetModel());
     }
     @PostMapping()

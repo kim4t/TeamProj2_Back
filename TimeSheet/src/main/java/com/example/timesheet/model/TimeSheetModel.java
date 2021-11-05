@@ -16,6 +16,7 @@ public class TimeSheetModel implements Supplier<TimeSheetModel> {
     String weekEnding;
     List<Object> timeSheet;
     String user;
+    int compensatedHours;
 
     @Override
     public TimeSheetModel get() {

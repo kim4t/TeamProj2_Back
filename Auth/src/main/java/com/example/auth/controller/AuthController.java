@@ -53,14 +53,14 @@ public class AuthController {
     @PostMapping("/auth")
     private ResponseEntity<?> authenticateClient(@RequestBody AuthenticationRequest request){
         String userName = request.getUserName();
-        String password = request.getUserName();
+        String password = request.getPassword();
         try{
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userName,password));
         }catch (Exception e){
-            return ResponseEntity.ok(new AuthenticationResponse("Fail authentication "+userName));
+            return ResponseEntity.ok(new AuthenticationResponse("Fail"));
         }
-       UserDetails loadedUser =  userService.loadUserByUsername(userName);
+        UserDetails loadedUser =  userService.loadUserByUsername(userName);
         String generatedToken = jwtUtil.generateToken(loadedUser);
-        return ResponseEntity.ok(new AuthenticationResponse(generatedToken));
+        return ResponseEntity.ok(new AuthenticationResponse(generatedToken,userName,"Success"));
     }
 }

@@ -12,14 +12,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Auth/pom.xml" />
         <option value="$PROJECT_DIR$/Summary/pom.xml" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Profile/pom.xml" />
-=======
-
-        <option value="$PROJECT_DIR$/Profile/pom.xml" />
-
         <option value="$PROJECT_DIR$/TimeSheet/pom.xml" />
->>>>>>> main
       </list>
     </option>
   </component>

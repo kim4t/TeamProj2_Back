@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Gateway" />
     <file type="web" url="file://$PROJECT_DIR$/Profile" />
+    <file type="web" url="file://$PROJECT_DIR$/ServiceDiscovery" />
     <file type="web" url="file://$PROJECT_DIR$/Summary" />
     <file type="web" url="file://$PROJECT_DIR$/TimeSheet" />
   </component>
@@ -14,6 +16,8 @@
         <option value="$PROJECT_DIR$/Summary/pom.xml" />
         <option value="$PROJECT_DIR$/Profile/pom.xml" />
         <option value="$PROJECT_DIR$/TimeSheet/pom.xml" />
+        <option value="$PROJECT_DIR$/ServiceDiscovery/pom.xml" />
+        <option value="$PROJECT_DIR$/Gateway/pom.xml" />
       </list>
     </option>
   </component>

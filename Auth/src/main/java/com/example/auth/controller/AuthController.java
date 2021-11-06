@@ -20,7 +20,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api")
 //@Setter(onMethod = @__({@Autowired}))
-@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", allowCredentials = "true")
+//@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*", allowCredentials = "true")
+//@CrossOrigin
 public class AuthController {
 
     @Autowired
@@ -55,6 +56,7 @@ public class AuthController {
     private ResponseEntity<?> authenticateClient(@RequestBody AuthenticationRequest request){
         String userName = request.getUserName();
         String password = request.getPassword();
+        System.out.println(userName + " " + password);
         try{
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userName,password));
         }catch (Exception e){

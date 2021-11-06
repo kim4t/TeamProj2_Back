@@ -1,0 +1,40 @@
+server:
+  port: 9000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
+
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: profile
+          uri: lb://profile
+          predicates:
+            - Path=/profile/**
+        - id: summary
+          uri: lb://summary
+          predicates:
+            - Path=/summary/**
+        - id: auth
+          uri: lb://auth
+          predicates:
+            - Path=/api/auth/**
+        - id: timesheet
+          uri: lb://timeSheet
+          predicates:
+            - Path=/api/timeSheet/**,/api/uploadFile/**
+

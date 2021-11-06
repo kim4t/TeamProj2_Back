@@ -19,8 +19,8 @@ public class ProfileController {
         this.service = service;
     }
 
-    @GetMapping(value="/profile", params = "user")
-    public Contact findContactByUser(@RequestParam String user){
+    @GetMapping(value="/profile/{user}")
+    public Contact findContactByUser(@PathVariable String user){
         return service.findContactByUser(user);
     }
 

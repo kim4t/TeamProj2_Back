@@ -33,6 +33,11 @@ public class SummaryController {
 
     @PostMapping("/summary")
     public void saveByWeekEnding(@RequestBody Summary summary){
-        service.saveByWeekEnding(summary);
+        Summary newSummary = service.findByWeekEnding(summary.getWeekEnding(),summary.getUser());
+        newSummary.setComment(summary.getComment());
+        newSummary.setApprovalStatus(summary.getApprovalStatus());
+        newSummary.setSubmissionStatus(summary.getSubmissionStatus());
+        newSummary.setTotalHours(summary.getTotalHours());
+        service.saveByWeekEnding(newSummary);
     }
 }

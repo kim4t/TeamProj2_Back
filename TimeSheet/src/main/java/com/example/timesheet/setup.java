@@ -15,7 +15,7 @@ public class setup implements CommandLineRunner {
     private TimeSheetService timeSheetService;
     @Override
     public void run(String... args) throws Exception {
-        checkTimeSheetRepo();
+        //checkTimeSheetRepo();
     }
     public  void checkTimeSheetRepo(){
         System.out.println(timeSheetService.getByWeekEnding("31 March 2018","user").get());

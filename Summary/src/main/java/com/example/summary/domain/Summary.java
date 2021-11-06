@@ -17,6 +17,7 @@ public class Summary {
     @Id
     private String id;
 
+    private String user;
     private String weekEnding;
     private String totalHours;
     private String submissionStatus;

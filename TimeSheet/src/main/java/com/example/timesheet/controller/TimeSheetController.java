@@ -20,7 +20,6 @@ public class TimeSheetController {
     }
     @PostMapping()
     public TimeSheetModel updateTimeSheet(@RequestBody TimeSheetModel timeSheetModel){
-
         return timeSheetService.updateTimeSheet(timeSheetModel);
     }
 }
